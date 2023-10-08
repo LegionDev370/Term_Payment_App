@@ -15,6 +15,8 @@ import { UseInterceptors } from '@nestjs/common';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { UploadedFile } from '@nestjs/common';
 import { AdminGuard } from '../guards/admin.guard';
+import { ApiTags } from '@nestjs/swagger';
+@ApiTags('products')
 @Controller('products')
 export class ProductController {
   constructor(private readonly productService: ProductService) {}

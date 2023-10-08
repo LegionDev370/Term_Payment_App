@@ -10,7 +10,6 @@ async function bootstrap() {
     .setTitle('TERM Payment')
     .setDescription('The Term Payment API description')
     .setVersion('1.0')
-    .addTag('payment')
     .build();
   const document = SwaggerModule.createDocument(app, config);
   app.setGlobalPrefix('/api');

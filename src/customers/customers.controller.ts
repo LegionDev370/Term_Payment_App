@@ -18,6 +18,8 @@ import { Response } from 'express';
 import { CookieGetter } from '../decorators/cookieGetter.decorator';
 import { JwtAuthGuard } from '../guards/jwt.auth.guard';
 import { AdminGuard } from '../guards/admin.guard';
+import { ApiTags } from '@nestjs/swagger';
+@ApiTags('customers')
 @Controller()
 export class CustomersController {
   constructor(private readonly customersService: CustomersService) {}

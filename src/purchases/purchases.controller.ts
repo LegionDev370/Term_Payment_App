@@ -15,6 +15,8 @@ import { RolesGuard } from '../guards/roles.guard';
 import { JwtAuthGuard } from '../guards/jwt.auth.guard';
 import { PayPurchaseDto } from './dto/pay-purchase.dto';
 import { AdminGuard } from '../guards/admin.guard';
+import { ApiTags } from '@nestjs/swagger';
+@ApiTags('purchases')
 @Controller()
 export class PurchasesController {
   constructor(private readonly purchasesService: PurchasesService) {}

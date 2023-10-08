@@ -14,10 +14,11 @@ import { CreateAdminDto } from './dto/create-admin.dto';
 import { UpdateAdminDto } from './dto/update-admin.dto';
 import { Response } from 'express';
 import { RolesGuard } from '../guards/roles.guard';
+import { ApiTags } from '@nestjs/swagger';
+@ApiTags('admin')
 @Controller('admins')
 export class AdminController {
   constructor(private readonly adminService: AdminService) {}
-
   @Post('create')
   @UseGuards(RolesGuard)
   create(

@@ -11,7 +11,8 @@ import { BasketService } from './basket.service';
 import { CreateBasketDto } from './dto/create-basket.dto';
 import { JwtAuthGuard } from '../guards/jwt.auth.guard';
 import { Request } from 'express';
-
+import { ApiTags } from '@nestjs/swagger';
+@ApiTags("basket")
 @Controller('basket')
 export class BasketController {
   constructor(private readonly basketService: BasketService) {}
